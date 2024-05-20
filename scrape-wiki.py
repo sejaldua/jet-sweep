@@ -25,5 +25,8 @@ for i, row in enumerate(tbody.findAll('tr')):
     lng = parse(loc.find('span', class_='longitude').getText())
     data.append([row.find('th').getText().strip(), lat, lng, *[col.getText().strip() for col in row.findAll('td')]])
 
-df = pd.DataFrame(data)
-print(df)
+COLUMNS = ['Stadium', 'Latitude', 'Longitude', 'Blank', 'Capacity', 'City', 'Surface', 'Roof Type', 'Team', 'Opened', 'Ref']
+df = pd.DataFrame(data, columns = COLUMNS)
+df = df[[col for col in df.columns if col not in ['Blank', 'Ref']]]
+df['Team Name'] = df['Team'].apply(lambda x: x.split(' ')[-1])
+df.to_csv('arena_info.csv')
