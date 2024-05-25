@@ -1,7 +1,6 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
-from geopy.distance import geodesic
 from lat_lon_parser import parse
 pd.options.display.max_columns = None
  
