@@ -25,5 +25,10 @@ df['Date'] = df['Date'].apply(lambda x: pd.to_datetime(f'{x} {"2024" if "January
 # remove pre-season games
 df = df[~df['Week'].isin(['Pre0', 'Pre1', 'Pre2', 'Pre3'])]
 
+# map team names to abbreviations
+abbrev_dict = pd.read_csv('abbreviations.csv').set_index('Franchise').to_dict(orient='index')
+df['Away Abbrev'] = df['Away'].apply(lambda x: abbrev_dict[x]['Commonly Used Abbreviations'])
+df['Home Abbrev'] = df['Home'].apply(lambda x: abbrev_dict[x]['Commonly Used Abbreviations'])
+
 print(f'There are {df.shape[0]} NFL games this season')
 df.to_csv('schedule.csv', index=False)
