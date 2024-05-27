@@ -34,9 +34,11 @@ for t1 in TEAMS:
 # minimize total number of visits
 prob += lpSum([choices[d][t1][t2] for d in DATES[1:] for t1 in TEAMS for t2 in TEAMS if t1 != t2]) <= 33
 
-prob += choices[DATES[2]]['Home']['PHI'] == 1
-prob += choices[DATES[-1]]['PHI']['Home'] == 1
+# start from home and end at home
+prob +=lpSum([choices[d]['Home'][t2] for t2 in TEAMS[1:] for d in DATES[1:4]]) == 1
+prob +=lpSum([choices[d][t1]['Home'] for t1 in TEAMS[1:] for d in DATES[-3:]]) == 1
 
+# make sure visits are played on home team dates
 for d in DATES[1:]:
     for t2 in TEAMS[1:]:
         for t1 in TEAMS:
@@ -53,20 +55,21 @@ for d in DATES:
 
 # Ensure that visits are sequential by dates
 for i, d in enumerate(DATES[1:-1]):
-    for t1 in TEAMS[1:]:
+    for t1 in TEAMS:
         for t2 in TEAMS[1:]:
-            if t1 != t2 and t2 != 'PHI':
-                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t2][t3] for d2 in DATES[i+1:i+4] for t3 in TEAMS[1:] if t3 != t2]), f""
+            if t1 != t2:
+                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t2][t3] for d2 in DATES[i+1:i+4] for t3 in TEAMS if t3 != t2]), f""
 
 for i, d in enumerate(DATES[2:]):
     for t1 in TEAMS[1:]:
-        for t2 in TEAMS[1:]:
-            if t1 != t2 and t1 != 'PHI':
-                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t3][t1] for d2 in DATES[i-4:i] for t3 in TEAMS[1:] if t3 != t1]), f""
+        for t2 in TEAMS:
+            if t1 != t2:
+                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t3][t1] for d2 in DATES[i-4:i] for t3 in TEAMS if t3 != t1]), f""
 
-# Objective: Minimize the total travel distance
-prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2]) <= 15000, "MinimizeTravelDistance"
-prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2])
+# # Objective: Minimize the total travel distance
+prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2]) <= 13000, "MinimizeTravelDistance"
+# prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2])
+
 # The problem is solved using PuLP's choice of Solver
 prob.solve()
 
