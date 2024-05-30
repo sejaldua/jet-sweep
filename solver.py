@@ -36,7 +36,7 @@ prob += lpSum([choices[d][t1][t2] for d in DATES[1:] for t1 in TEAMS for t2 in T
 
 # start from home and end at home
 prob +=lpSum([choices[d]['Home'][t2] for t2 in TEAMS[1:] for d in DATES[1:4]]) == 1
-prob +=lpSum([choices[d][t1]['Home'] for t1 in TEAMS[1:] for d in DATES[-3:]]) == 1
+prob +=lpSum([choices[d][t1]['Home'] for t1 in TEAMS[1:] for d in DATES[-1:]]) == 1
 
 # make sure visits are played on home team dates
 for d in DATES[1:]:
@@ -67,7 +67,7 @@ for i, d in enumerate(DATES[2:]):
                 prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t3][t1] for d2 in DATES[i-4:i] for t3 in TEAMS if t3 != t1]), f""
 
 # # Objective: Minimize the total travel distance
-prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2]) <= 13000, "MinimizeTravelDistance"
+prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2]) <= 14000, "MinimizeTravelDistance"
 # prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2])
 
 # The problem is solved using PuLP's choice of Solver
