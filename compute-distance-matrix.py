@@ -16,3 +16,11 @@ for t in TEAMS:
         miles.append([t, tt, distance])
 mile_df = pd.DataFrame(miles, columns = ['src', 'dest', 'miles'])
 mile_df.to_csv('mile_matrix.csv', index=False)
+
+# compute distance between each arena
+miles = []
+for t in TEAMS:
+    distance = [geodesic(coords_dict[t]['Coords'], coords_dict[tt]['Coords']).miles for tt in TEAMS]
+    miles.append([t, *distance])
+mile_df = pd.DataFrame(miles, columns = ['', *TEAMS])
+mile_df.to_csv('mile_matrix_wide.csv', index=False)

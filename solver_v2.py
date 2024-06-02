@@ -9,7 +9,7 @@ MM = MM.set_index(['src', 'dest'])
 # There are 32 NFL teams
 TEAMS = ['Home', *sorted(list(schedule['Home Abbrev'].unique()))]
 # There are 56 game dates in the 2024-25 season
-DATES = [0, *list(schedule['Date'].unique())]
+DATES = [0, *range(1, 35)]
 
 # Define Problem  
 
@@ -38,13 +38,8 @@ prob += lpSum([choices[d][t1][t2] for d in DATES[1:] for t1 in TEAMS for t2 in T
 prob +=lpSum([choices[d]['Home'][t2] for t2 in TEAMS[1:] for d in DATES[1:4]]) == 1
 prob +=lpSum([choices[d][t1]['Home'] for t1 in TEAMS[1:] for d in DATES[-1:]]) == 1
 
-# make sure visits are played on home team dates
+# make sure one visit per date
 for d in DATES[1:]:
-    for t2 in TEAMS[1:]:
-        for t1 in TEAMS:
-            if schedule[(schedule['Date'] == d) & (schedule['Home Abbrev'] == t2)].shape[0] == 0:
-                prob += choices[d][t1][t2] == 0, ""
-
     prob += lpSum([choices[d][t1][t2] for t1 in TEAMS for t2 in TEAMS]) <= 1, ""
 
 for d in DATES:
@@ -58,20 +53,20 @@ for i, d in enumerate(DATES[1:-1]):
     for t1 in TEAMS:
         for t2 in TEAMS[1:]:
             if t1 != t2:
-                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t2][t3] for d2 in DATES[i+1:i+4] for t3 in TEAMS if t3 != t2]), f""
+                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t2][t3] for d2 in DATES[i+1:i+2] for t3 in TEAMS if t3 != t2]), f""
 
 for i, d in enumerate(DATES[2:]):
     for t1 in TEAMS[1:]:
         for t2 in TEAMS:
             if t1 != t2:
-                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t3][t1] for d2 in DATES[i-4:i] for t3 in TEAMS if t3 != t1]), f""
+                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t3][t1] for d2 in DATES[i-1:i] for t3 in TEAMS if t3 != t1]), f""
 
 # Minimize travel distance for each segment
 for d in DATES[1:]:
     for t1 in TEAMS[1:]:
         for t2 in TEAMS[1:]:
             if t1 != 2:
-                prob += choices[d][t1][t2] * MM.loc[(t1, t2), 'miles']  <= 1100
+                prob += choices[d][t1][t2] * MM.loc[(t1, t2), 'miles']  <= 1200
 
 # Objective: Minimize the total travel distance
 prob += lpSum([choices[d][t1][t2] * MM.loc[(t1, t2), 'miles'] for d in DATES[1:] for t1 in TEAMS[1:] for t2 in TEAMS[1:] if t1 != t2]) <= 14000, "MinimizeTravelDistance"
@@ -102,7 +97,7 @@ if LpStatus[prob.status] == 'Optimal':
     matrix_df = pd.DataFrame(matrix, columns=TEAMS)
     matrix_df.index = TEAMS
     print(matrix_df)
-    matrix_df.to_csv('solved_route.csv')
+    matrix_df.to_csv('solved_route_date_agnostic.csv')
 
 else:
     print('Problem is infeasible')

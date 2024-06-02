@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_34da7b251bcf972663948cbcf601ca99 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_34da7b251bcf972663948cbcf601ca99" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_34da7b251bcf972663948cbcf601ca99 = L.map(
+                "map_34da7b251bcf972663948cbcf601ca99",
+                {
+                    center: [37.664478115757575, -90.06445337030303],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b3b456055438e9a3a3058cd874274e55 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b3b456055438e9a3a3058cd874274e55.addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            var marker_d1ed3be9b77336c44638df4d526c6f54 = L.marker(
+                [40.759, -73.9761],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_d1ed3be9b77336c44638df4d526c6f54.bindTooltip(
+                `<div>
+                     Home
+
+2024-09-08 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_9e7cd3985b631ab49f886a68feee06f1 = L.polyline(
+                [[40.759, -73.9761], [47.59527778, -122.3316667]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_9e7cd3985b631ab49f886a68feee06f1.bindTooltip(
+                `<div>
+                     Home >>> Seattle Seahawks
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_96c9310105e4908da0b0f6aa575ef777 = L.marker(
+                [47.59527778, -122.3316667],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_96c9310105e4908da0b0f6aa575ef777.bindTooltip(
+                `<div>
+                     Seattle Seahawks
+
+2024-09-09 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bf1ee33c13661d81cc5a1d7a778aa95d = L.polyline(
+                [[47.59527778, -122.3316667], [37.40305556, -121.97]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_bf1ee33c13661d81cc5a1d7a778aa95d.bindTooltip(
+                `<div>
+                     Seattle Seahawks >>> San Francisco 49ers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ce68d735098ac384a81629bdf6ecb509 = L.marker(
+                [37.40305556, -121.97],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_ce68d735098ac384a81629bdf6ecb509.bindTooltip(
+                `<div>
+                     San Francisco 49ers
+
+2024-09-15 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_60d1bb9864b87a2bb041b08c5384b241 = L.polyline(
+                [[37.40305556, -121.97], [33.52805556, -112.2630556]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_60d1bb9864b87a2bb041b08c5384b241.bindTooltip(
+                `<div>
+                     San Francisco 49ers >>> Arizona Cardinals
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53da3e17421cad35ed1b92a4fbecf0a3 = L.marker(
+                [33.52805556, -112.2630556],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_53da3e17421cad35ed1b92a4fbecf0a3.bindTooltip(
+                `<div>
+                     Arizona Cardinals
+
+2024-09-22 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5c0685c0c4aa67d9a9f7dfa265becdb0 = L.polyline(
+                [[33.52805556, -112.2630556], [36.09055556, -115.1838889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_5c0685c0c4aa67d9a9f7dfa265becdb0.bindTooltip(
+                `<div>
+                     Arizona Cardinals >>> Las Vegas Raiders
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_96c6378606b818fa505abcfdd62333b3 = L.marker(
+                [36.09055556, -115.1838889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_96c6378606b818fa505abcfdd62333b3.bindTooltip(
+                `<div>
+                     Las Vegas Raiders
+
+2024-09-29 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_28dc5b4e24f37be0f2a51f92d61c6c20 = L.polyline(
+                [[36.09055556, -115.1838889], [33.95305556, -118.3388889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_28dc5b4e24f37be0f2a51f92d61c6c20.bindTooltip(
+                `<div>
+                     Las Vegas Raiders >>> Los Angeles Chargers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11a16278574f5db9387ea78b68734bb2 = L.marker(
+                [33.95305556, -118.3388889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_11a16278574f5db9387ea78b68734bb2.bindTooltip(
+                `<div>
+                     Los Angeles Chargers
+
+2024-10-06 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c0a02aaee7c750aeb3074935184fe09c = L.polyline(
+                [[33.95305556, -118.3388889], [33.95305556, -118.3388889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_c0a02aaee7c750aeb3074935184fe09c.bindTooltip(
+                `<div>
+                     Los Angeles Chargers >>> Los Angeles Rams
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc69b35cfa63ab3665946b7c7bb76fa5 = L.marker(
+                [33.95305556, -118.3388889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_bc69b35cfa63ab3665946b7c7bb76fa5.bindTooltip(
+                `<div>
+                     Los Angeles Rams
+
+2024-10-13 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1fa965554c67993285797a75bd3e3a2f = L.polyline(
+                [[33.95305556, -118.3388889], [39.74388889, -105.02]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_1fa965554c67993285797a75bd3e3a2f.bindTooltip(
+                `<div>
+                     Los Angeles Rams >>> Denver Broncos
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b2ed2a1d5103ffa1a897bdf73930b0a = L.marker(
+                [39.74388889, -105.02],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_4b2ed2a1d5103ffa1a897bdf73930b0a.bindTooltip(
+                `<div>
+                     Denver Broncos
+
+2024-10-17 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6d52b463400bcadbdc55aea1f3bc80a9 = L.polyline(
+                [[39.74388889, -105.02], [29.95083333, -90.08111111]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_6d52b463400bcadbdc55aea1f3bc80a9.bindTooltip(
+                `<div>
+                     Denver Broncos >>> New Orleans Saints
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_32d5f7a3d39cac7cc5159e9e6195b060 = L.marker(
+                [29.95083333, -90.08111111],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_32d5f7a3d39cac7cc5159e9e6195b060.bindTooltip(
+                `<div>
+                     New Orleans Saints
+
+2024-10-20 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f6e1cedbe297b6d61b288450addf6456 = L.polyline(
+                [[29.95083333, -90.08111111], [30.32388889, -81.6375]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_f6e1cedbe297b6d61b288450addf6456.bindTooltip(
+                `<div>
+                     New Orleans Saints >>> Jacksonville Jaguars
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_afe0194e49052e99c27d7b7bfbd58537 = L.marker(
+                [30.32388889, -81.6375],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_afe0194e49052e99c27d7b7bfbd58537.bindTooltip(
+                `<div>
+                     Jacksonville Jaguars
+
+2024-10-21 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_22f28d5126557d7a13123c673ffd297a = L.polyline(
+                [[30.32388889, -81.6375], [27.97583333, -82.50333333]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_22f28d5126557d7a13123c673ffd297a.bindTooltip(
+                `<div>
+                     Jacksonville Jaguars >>> Tampa Bay Buccaneers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eefd21728731dc1aee30e2a829770a4f = L.marker(
+                [27.97583333, -82.50333333],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_eefd21728731dc1aee30e2a829770a4f.bindTooltip(
+                `<div>
+                     Tampa Bay Buccaneers
+
+2024-10-27 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_71bc8c510254823fab5c839a145b203a = L.polyline(
+                [[27.97583333, -82.50333333], [25.95805556, -80.23888889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_71bc8c510254823fab5c839a145b203a.bindTooltip(
+                `<div>
+                     Tampa Bay Buccaneers >>> Miami Dolphins
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0c252b635d17d71b8134ffcf881087fe = L.marker(
+                [25.95805556, -80.23888889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_0c252b635d17d71b8134ffcf881087fe.bindTooltip(
+                `<div>
+                     Miami Dolphins
+
+2024-10-28 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0ae6f0ac486704e49552700c8c59c637 = L.polyline(
+                [[25.95805556, -80.23888889], [40.44666667, -80.01583333]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_0ae6f0ac486704e49552700c8c59c637.bindTooltip(
+                `<div>
+                     Miami Dolphins >>> Pittsburgh Steelers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2a1ee640aa130151b77ce0c4a664826d = L.marker(
+                [40.44666667, -80.01583333],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_2a1ee640aa130151b77ce0c4a664826d.bindTooltip(
+                `<div>
+                     Pittsburgh Steelers
+
+2024-10-31 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f0428e37ea39e22387ca720ef0a53298 = L.polyline(
+                [[40.44666667, -80.01583333], [40.81352778, -74.07436111]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_f0428e37ea39e22387ca720ef0a53298.bindTooltip(
+                `<div>
+                     Pittsburgh Steelers >>> New York Jets
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a51eedc7fc62c540e2defaf6bcaa5bf7 = L.marker(
+                [40.81352778, -74.07436111],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_a51eedc7fc62c540e2defaf6bcaa5bf7.bindTooltip(
+                `<div>
+                     New York Jets
+
+2024-11-03 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_94d2c1d6af22a5a27d96e902a61790a4 = L.polyline(
+                [[40.81352778, -74.07436111], [40.81352778, -74.07436111]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_94d2c1d6af22a5a27d96e902a61790a4.bindTooltip(
+                `<div>
+                     New York Jets >>> New York Giants
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68fcfe7db921a5f91668d8171389144e = L.marker(
+                [40.81352778, -74.07436111],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_68fcfe7db921a5f91668d8171389144e.bindTooltip(
+                `<div>
+                     New York Giants
+
+2024-11-07 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_60393631a65e74d308ca04d57206bdeb = L.polyline(
+                [[40.81352778, -74.07436111], [39.27805556, -76.62277778]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_60393631a65e74d308ca04d57206bdeb.bindTooltip(
+                `<div>
+                     New York Giants >>> Baltimore Ravens
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_088d62ff4ca5bfb08c3c2fde018bae74 = L.marker(
+                [39.27805556, -76.62277778],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_088d62ff4ca5bfb08c3c2fde018bae74.bindTooltip(
+                `<div>
+                     Baltimore Ravens
+
+2024-11-10 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b6a44ea58b9ff66aaa2faa4d4172c235 = L.polyline(
+                [[39.27805556, -76.62277778], [38.90777778, -76.86444444]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_b6a44ea58b9ff66aaa2faa4d4172c235.bindTooltip(
+                `<div>
+                     Baltimore Ravens >>> Washington Commanders
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_639f1cfc8ac56ab228e5637addb7edc8 = L.marker(
+                [38.90777778, -76.86444444],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_639f1cfc8ac56ab228e5637addb7edc8.bindTooltip(
+                `<div>
+                     Washington Commanders
+
+2024-11-14 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f58b6356ec7f1180d4e625e118c0f6f4 = L.polyline(
+                [[38.90777778, -76.86444444], [39.90083333, -75.1675]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_f58b6356ec7f1180d4e625e118c0f6f4.bindTooltip(
+                `<div>
+                     Washington Commanders >>> Philadelphia Eagles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f4e69e3815f158c98dec67015edb5fb = L.marker(
+                [39.90083333, -75.1675],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_2f4e69e3815f158c98dec67015edb5fb.bindTooltip(
+                `<div>
+                     Philadelphia Eagles
+
+2024-11-17 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_41cc980da9e81292b8812b69023d1ab4 = L.polyline(
+                [[39.90083333, -75.1675], [42.09111111, -71.26388889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_41cc980da9e81292b8812b69023d1ab4.bindTooltip(
+                `<div>
+                     Philadelphia Eagles >>> New England Patriots
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e0f2525be8a05d126beb483ccedde08 = L.marker(
+                [42.09111111, -71.26388889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_7e0f2525be8a05d126beb483ccedde08.bindTooltip(
+                `<div>
+                     New England Patriots
+
+2024-11-21 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0bd3fc44bc1bd95f77e4c329d71c2580 = L.polyline(
+                [[42.09111111, -71.26388889], [41.50611111, -81.69944444]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_0bd3fc44bc1bd95f77e4c329d71c2580.bindTooltip(
+                `<div>
+                     New England Patriots >>> Cleveland Browns
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_822c636c400b04095f086f7da6fa3a9a = L.marker(
+                [41.50611111, -81.69944444],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_822c636c400b04095f086f7da6fa3a9a.bindTooltip(
+                `<div>
+                     Cleveland Browns
+
+2024-11-24 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bd82b456aad92bfcc7a0d91260c3670f = L.polyline(
+                [[41.50611111, -81.69944444], [35.22583333, -80.85277778]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_bd82b456aad92bfcc7a0d91260c3670f.bindTooltip(
+                `<div>
+                     Cleveland Browns >>> Carolina Panthers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_22304ebe08f004d902aa802f3960e692 = L.marker(
+                [35.22583333, -80.85277778],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_22304ebe08f004d902aa802f3960e692.bindTooltip(
+                `<div>
+                     Carolina Panthers
+
+2024-11-28 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1bfa619c3081542d511d24249cbdce75 = L.polyline(
+                [[35.22583333, -80.85277778], [42.34, -83.04555556]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_1bfa619c3081542d511d24249cbdce75.bindTooltip(
+                `<div>
+                     Carolina Panthers >>> Detroit Lions
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14bb03e6fe29f2791d6eb751502ce1cd = L.marker(
+                [42.34, -83.04555556],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_14bb03e6fe29f2791d6eb751502ce1cd.bindTooltip(
+                `<div>
+                     Detroit Lions
+
+2024-11-29 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5fef0a6321de79c6d717eac43a53b994 = L.polyline(
+                [[42.34, -83.04555556], [39.04888889, -94.48388889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_5fef0a6321de79c6d717eac43a53b994.bindTooltip(
+                `<div>
+                     Detroit Lions >>> Kansas City Chiefs
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e480c4bb7f77ce11f15495caae5be0f1 = L.marker(
+                [39.04888889, -94.48388889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_e480c4bb7f77ce11f15495caae5be0f1.bindTooltip(
+                `<div>
+                     Kansas City Chiefs
+
+2024-12-01 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_159b50a68e390e253df19db490c6b52a = L.polyline(
+                [[39.04888889, -94.48388889], [33.75555556, -84.4]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_159b50a68e390e253df19db490c6b52a.bindTooltip(
+                `<div>
+                     Kansas City Chiefs >>> Atlanta Falcons
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40148b0e740a4a464b0fae5f1823bbab = L.marker(
+                [33.75555556, -84.4],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_40148b0e740a4a464b0fae5f1823bbab.bindTooltip(
+                `<div>
+                     Atlanta Falcons
+
+2024-12-08 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_21c6aac3ee19d12f8b45001c0a7a9d48 = L.polyline(
+                [[33.75555556, -84.4], [36.16638889, -86.77138889]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_21c6aac3ee19d12f8b45001c0a7a9d48.bindTooltip(
+                `<div>
+                     Atlanta Falcons >>> Tennessee Titans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11bbb0d238186972cecb08e35919a4f2 = L.marker(
+                [36.16638889, -86.77138889],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_11bbb0d238186972cecb08e35919a4f2.bindTooltip(
+                `<div>
+                     Tennessee Titans
+
+2024-12-09 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0a1963d27a5ce368fd393278f96d3d04 = L.polyline(
+                [[36.16638889, -86.77138889], [32.74777778, -97.09277778]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_0a1963d27a5ce368fd393278f96d3d04.bindTooltip(
+                `<div>
+                     Tennessee Titans >>> Dallas Cowboys
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6bc95d40dfc24ed8c460af47f8585454 = L.marker(
+                [32.74777778, -97.09277778],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_6bc95d40dfc24ed8c460af47f8585454.bindTooltip(
+                `<div>
+                     Dallas Cowboys
+
+2024-12-15 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_709e8494325924949980b8fa513a3e10 = L.polyline(
+                [[32.74777778, -97.09277778], [29.68472222, -95.41083333]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_709e8494325924949980b8fa513a3e10.bindTooltip(
+                `<div>
+                     Dallas Cowboys >>> Houston Texans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a907c3347e81be1666ca8384f5cec9fa = L.marker(
+                [29.68472222, -95.41083333],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_a907c3347e81be1666ca8384f5cec9fa.bindTooltip(
+                `<div>
+                     Houston Texans
+
+2024-12-16 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ce7e2246353f18c870a9db43541348da = L.polyline(
+                [[29.68472222, -95.41083333], [44.97388889, -93.25805556]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_ce7e2246353f18c870a9db43541348da.bindTooltip(
+                `<div>
+                     Houston Texans >>> Minnesota Vikings
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82f76666a6257a75e14ef1b601e74f99 = L.marker(
+                [44.97388889, -93.25805556],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_82f76666a6257a75e14ef1b601e74f99.bindTooltip(
+                `<div>
+                     Minnesota Vikings
+
+2024-12-19 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7313b625e0c558627c621ea7d5dfb130 = L.polyline(
+                [[44.97388889, -93.25805556], [39.095, -84.51611111]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_7313b625e0c558627c621ea7d5dfb130.bindTooltip(
+                `<div>
+                     Minnesota Vikings >>> Cincinnati Bengals
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9238813db8d35eab725bd8b6d140ecb9 = L.marker(
+                [39.095, -84.51611111],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_9238813db8d35eab725bd8b6d140ecb9.bindTooltip(
+                `<div>
+                     Cincinnati Bengals
+
+2024-12-22 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_480e843d99c96080f70a6c4032ddee1c = L.polyline(
+                [[39.095, -84.51611111], [39.76005556, -86.16380556]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_480e843d99c96080f70a6c4032ddee1c.bindTooltip(
+                `<div>
+                     Cincinnati Bengals >>> Indianapolis Colts
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c21cd06d4e1b11a124806388cf750d34 = L.marker(
+                [39.76005556, -86.16380556],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_c21cd06d4e1b11a124806388cf750d34.bindTooltip(
+                `<div>
+                     Indianapolis Colts
+
+2024-12-23 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_597c975da360e46a3787181c0f61c350 = L.polyline(
+                [[39.76005556, -86.16380556], [44.50138889, -88.06222222]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_597c975da360e46a3787181c0f61c350.bindTooltip(
+                `<div>
+                     Indianapolis Colts >>> Green Bay Packers
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f938e453a52336137aa280dad3b8fc0 = L.marker(
+                [44.50138889, -88.06222222],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_8f938e453a52336137aa280dad3b8fc0.bindTooltip(
+                `<div>
+                     Green Bay Packers
+
+2024-12-26 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5ce33fafa058428e8b0dab702ac24d49 = L.polyline(
+                [[44.50138889, -88.06222222], [41.86222222, -87.61666667]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_5ce33fafa058428e8b0dab702ac24d49.bindTooltip(
+                `<div>
+                     Green Bay Packers >>> Chicago Bears
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b30f364cb1e1fe9459bafa9b920cdd1b = L.marker(
+                [41.86222222, -87.61666667],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_b30f364cb1e1fe9459bafa9b920cdd1b.bindTooltip(
+                `<div>
+                     Chicago Bears
+
+2024-12-29 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_cd97858c84495fa84df22e270fa1114c = L.polyline(
+                [[41.86222222, -87.61666667], [42.77388889, -78.78694444]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_cd97858c84495fa84df22e270fa1114c.bindTooltip(
+                `<div>
+                     Chicago Bears >>> Buffalo Bills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_489bc76d13bf61e79da896e828258047 = L.marker(
+                [42.77388889, -78.78694444],
+                {}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            marker_489bc76d13bf61e79da896e828258047.bindTooltip(
+                `<div>
+                     Buffalo Bills
+
+2025-01-05 00:00:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_43b3e429241b3d011b86b4ce30f8cfc0 = L.polyline(
+                [[42.77388889, -78.78694444], [40.759, -73.9761]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_34da7b251bcf972663948cbcf601ca99);
+        
+    
+            poly_line_43b3e429241b3d011b86b4ce30f8cfc0.bindTooltip(
+                `<div>
+                     Buffalo Bills >>> Home
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
