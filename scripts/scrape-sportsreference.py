@@ -31,4 +31,4 @@ df['Away Abbrev'] = df['Away'].apply(lambda x: abbrev_dict[x]['Commonly Used Abb
 df['Home Abbrev'] = df['Home'].apply(lambda x: abbrev_dict[x]['Commonly Used Abbreviations'])
 
 print(f'There are {df.shape[0]} NFL games this season')
-df.to_csv('schedule.csv', index=False)
+df.to_csv('../outputs/schedule.csv', index=False)

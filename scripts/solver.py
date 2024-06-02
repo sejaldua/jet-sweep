@@ -1,9 +1,9 @@
 from pulp import *
 import pandas as pd
 
-schedule = pd.read_csv('schedule.csv')
+schedule = pd.read_csv('../inputs/schedule.csv')
 date_df = schedule.set_index('Date')
-MM = pd.read_csv('mile_matrix.csv')
+MM = pd.read_csv('../inputs/mile_matrix.csv')
 MM = MM.set_index(['src', 'dest'])
 
 # There are 32 NFL teams
@@ -102,7 +102,7 @@ if LpStatus[prob.status] == 'Optimal':
     matrix_df = pd.DataFrame(matrix, columns=TEAMS)
     matrix_df.index = TEAMS
     print(matrix_df)
-    matrix_df.to_csv('solved_route.csv')
+    matrix_df.to_csv('../outputs/solved_route.csv')
 
 else:
     print('Problem is infeasible')
